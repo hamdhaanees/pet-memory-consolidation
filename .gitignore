@@ -1,0 +1,9 @@
+data/**/*.nii
+data/**/*.nii.gz
+data/**/*.tsv
+data/**/*.csv
+!data/.gitkeep
+figures/*.png
+results/*.csv
+.ipynb_checkpoints/
+__pycache__/
