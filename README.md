@@ -6,7 +6,7 @@ An independent Python neuroimaging reanalysis of OpenNeuro **ds004731 v1.0.0** u
 
 Does cerebral protein synthesis show a molecular pattern consistent with **sleep-dependent consolidation of a trained visual representation**?
 
-The notebook tests three linked questions:
+This notebook tests three linked questions:
 
 1. Does global cortical rCPS differ between sleep and wake groups?
 2. Is rCPS higher in V1 contralateral to the trained visual field than in untrained V1?
@@ -19,7 +19,7 @@ A whole-cortex Destrieux analysis complements these targeted tests.
 - 35 participants: 18 Asleep, 17 Awake.
 - 5,180 hemisphere-specific cortical measurements; 5,062 (97.7%) passed ≥80% coverage QC.
 - Global cortical rCPS: no detectable Asleep–Awake difference (Welch p = 0.735; d = 0.114).
-- No cortical parcel survived FDR correction for the sleep/wake comparison.
+- The largest descriptive Asleep > Awake rCPS differences were observed in the left transverse temporal sulcus (+0.190 nmol/g/min), right rectus gyrus (+0.168), right suborbital sulcus (+0.144), and left precentral regions. The largest Awake > Asleep differences included the right anterior occipital sulcus (−0.124) and left subcallosal gyrus (−0.123). These regional differences were descriptive; none survived FDR correction.
 - The apparent predominance of Asleep > Awake parcels was not supported by participant-label permutation (p = 0.765).
 - Trained vs untrained V1: 2.4971 vs 2.4912 nmol/g/min; paired p = 0.739, dz = 0.057.
 - Sleep modulation of the trained–untrained V1 contrast: p = 0.558, d ≈ 0.20.
