@@ -2,6 +2,8 @@
 
 An independent Python neuroimaging reanalysis of OpenNeuro **ds004731 v1.0.0** using L-[1-¹¹C]leucine PET-derived rates of cerebral protein synthesis (rCPS).
 
+![Example cortical rCPS surface](figures/SM07_cortical_rcps_surface.png)
+
 ## Primary question
 
 Does cerebral protein synthesis show a molecular pattern consistent with **sleep-dependent consolidation of a trained visual representation**?
@@ -10,11 +12,17 @@ The notebook tests three linked questions:
 
 1. Does global cortical rCPS differ between sleep and wake groups?
 2. Is rCPS higher in V1 contralateral to the trained visual field than in untrained V1?
-3. Is the trained–untrained V1 difference larger after sleep or associated with Stage 3 sleep?
+3. Is the trained–untrained V1 difference larger in the sleep condition or associated with sleep architecture?
 
 A whole-cortex Destrieux analysis complements these targeted tests.
 
 ## Main results
+
+### Regional sleep–wake effect sizes
+
+![Regional cortical effect sizes](figures/cortical_sleep_wake_cohens_d.png)
+
+*Regional Cohen's d for the Asleep − Awake comparison. Positive values indicate higher mean rCPS in the Asleep group. The spatial pattern is descriptive; no regional comparison reached nominal significance.*
 
 - 35 participants: 18 Asleep, 17 Awake.
 - 5,180 hemisphere-specific cortical measurements; 5,062 (97.7%) passed ≥80% coverage QC.
@@ -22,14 +30,22 @@ A whole-cortex Destrieux analysis complements these targeted tests.
 - No cortical parcel survived FDR correction for the sleep/wake comparison.
 - The apparent predominance of Asleep > Awake parcels was not supported by participant-label permutation (p = 0.765).
 - Trained vs untrained V1: 2.4971 vs 2.4912 nmol/g/min; paired p = 0.739, dz = 0.057.
-- Sleep modulation of the trained–untrained V1 contrast: p = 0.558, d ≈ 0.20.
-- Within sleepers, Stage 3 sleep was not associated with the V1 contrast (Pearson r = 0.121, p = 0.633).
 
+### Trained versus untrained V1
+
+![Trained versus untrained V1](figures/trained_vs_untrained_v1.png)
+
+- Sleep modulation of the trained–untrained V1 contrast: p = 0.558, d ≈ 0.20.
+- Within sleepers, no sleep stage (N1, N2, N3 or REM) showed a detectable association with the trained–untrained V1 contrast after FDR correction. N3, the principal continuous sleep-stage measure, was also not associated with the V1 contrast (Pearson r = 0.121, p = 0.633; Spearman ρ = −0.068, p = 0.788). REM inference was limited because only 5/18 sleepers had non-zero REM during the measured interval.
 These are **null molecular/neuroimaging results**, not evidence that memory consolidation did not occur. Behavioural memory performance is not modelled directly here.
 
 ## Computational workflow
 
 The project demonstrates Python-based dynamic PET visualisation, NIfTI handling, FreeSurfer/fsaverage surface processing, atlas compatibility validation, Destrieux parcellation, coverage QC, cohort aggregation, effect sizes, FDR correction, participant-level permutation testing, and hypothesis-driven V1 analysis.
+
+### Dynamic PET inspection
+
+![Dynamic PET time course](figures/dynamic_pet_timecourse.png)
 
 ## Repository layout
 
